@@ -27,22 +27,93 @@ header{
 .pokedex_list {
     display: grid;
     margin: 0 25%;
-    grid-auto-rows: 200px;
+    grid-auto-rows: 300px;
     gap: 50px;
 }
 
-.pokemon_card {
+.pokedex_card {
     display: flex;
+    cursor: pointer;
     list-style: none;
     align-items: center;
-    justify-content: center;
+    border: 1px solid aqua;
+    border-radius: 10px;
     flex-direction: column;
     background-color: lightblue;
 }
 
-.pokemon_card_img{
+.pokedex_card:hover{
+    box-shadow: 0px 0px 10px rgb(219, 163, 236);
+}
+
+.pokedex_card_img{
     width: 150px;
     height: 150px;
+}
+
+/*
+    parte do card-highlight
+*/
+
+.card_highlight{
+    position: fixed;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(63, 63, 177);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 450px;
+}
+
+.card_highlight_img{
+    height: 175px;
+    width: 175px;
+    align-self: center;
+}
+
+.card_highlight_titulo{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sair{
+    margin-left: 95%;
+    background: none;
+    outline: none;
+    border: none;
+    cursor:pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+}
+
+/*
+    fim parte do card-highlight
+*/
+
+.pokemon_id::before {
+    content: '#';
+}
+
+.overlay {
+    position:  fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 450px) {

@@ -1,5 +1,6 @@
-import {pegaPokemons} from './pegaPokemons.mjs'
+import {renderizaPokemons} from './renderizaPokemons.mjs'
+const c = console.log.bind(console)
 
 const pokedexList = document.querySelector('.pokedex_list')
 
-pegaPokemons(pokedexList)
+renderizaPokemons(pokedexList, 0)
